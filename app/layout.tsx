@@ -2,6 +2,7 @@ import React from 'react'
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
 import Navigation from './components/Navigation'
+import { Analytics } from '@vercel/analytics/next'
 
 // Updated: Portfolio deployment
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body>
         <Navigation />
         {children}
+        <Analytics />
       </body>
     </html>
   )

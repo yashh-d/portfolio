@@ -532,16 +532,41 @@ export default function Home() {
         <div className={styles.creativeSection}>
           <div className={styles.creativeContent}>
             <h2 className={styles.creativeTitle}>Creative & Visual Work</h2>
-            <p className={styles.creativeDescription}>Exploring the intersection of technology, finance, and creative expression through visual storytelling and multimedia content.</p>
+            <p className={styles.creativeDescription}>Exploring the intersection of technology and creative expression through visual storytelling and multimedia content.</p>
             
             <div className={styles.creativeGrid}>
               <div className={styles.creativeCard}>
                 <div className={styles.creativeHeader}>
-                  <h3 className={styles.creativeItemTitle}>Realistic Waterfall</h3>
+                  <h3 className={styles.creativeItemTitle}>Jacob&Co Watch Ad</h3>
                   <div className={styles.creativeTags}>
                     <span className={styles.creativeTag}>AI Generated</span>
-                    <span className={styles.creativeTag}>Video</span>
-                    <span className={styles.creativeTag}>Nature</span>
+                    <span className={styles.creativeTag}>Commercial</span>
+                    <span className={styles.creativeTag}>Luxury</span>
+                  </div>
+                </div>
+                <div className={styles.videoContainer}>
+                  <video 
+                    className={styles.creativeVideo}
+                    controls
+                    preload="metadata"
+                    poster=""
+                  >
+                    <source src="/High_end_watch_202508311337.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p className={styles.creativeDescription}>
+                  Jacob&Co watch commercial.
+                </p>
+              </div>
+
+              <div className={styles.creativeCard}>
+                <div className={styles.creativeHeader}>
+                  <h3 className={styles.creativeItemTitle}>L'Oréal NYC Ad Concept</h3>
+                  <div className={styles.creativeTags}>
+                    <span className={styles.creativeTag}>AI Generated</span>
+                    <span className={styles.creativeTag}>Commercial</span>
+                    <span className={styles.creativeTag}>Beauty</span>
                   </div>
                 </div>
                 <div className={styles.videoContainer}>
@@ -556,8 +581,7 @@ export default function Home() {
                   </video>
                 </div>
                 <p className={styles.creativeDescription}>
-                  A fun concept for a L'Oréal nail polish ad I dreamed up - AI-generated waterfall with flowing, 
-                  glossy textures that mirror the polish aesthetic.
+                  L'Oréal ad concept set in New York.
                 </p>
               </div>
 
@@ -582,8 +606,7 @@ export default function Home() {
                   </video>
                 </div>
                 <p className={styles.creativeDescription}>
-                  Because why not? A singing Labrador skydiving over the Great Barrier Reef - 
-                  just me experimenting with AI's creative storytelling limits.
+                  Singing Labrador skydiving over the Great Barrier Reef.
                 </p>
               </div>
 
@@ -608,8 +631,7 @@ export default function Home() {
                   </audio>
                 </div>
                 <p className={styles.creativeDescription}>
-                  An AI-generated song about colors and sunset vibes - 
-                  exploring what happens when you let AI compose both lyrics and melody.
+                  AI-generated song about colors and sunset vibes.
                 </p>
               </div>
 
@@ -634,8 +656,7 @@ export default function Home() {
                   </audio>
                 </div>
                 <p className={styles.creativeDescription}>
-                  Atmospheric AI-generated track with oceanic vibes - 
-                  perfect for those late-night coding sessions or deep research dives.
+                  Atmospheric AI-generated track with oceanic vibes.
                 </p>
               </div>
             </div>
