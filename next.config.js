@@ -5,9 +5,6 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  experimental: {
-    appDir: true
-  },
   webpack: (config) => {
     // Handle video files
     config.module.rules.push({
