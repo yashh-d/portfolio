@@ -1,0 +1,108 @@
+.textOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+  transform: translateY(-25%);
+}
+
+.textContainer {
+  text-align: center;
+  max-width: 90%;
+  padding: 2rem;
+}
+
+.staticText {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+.dynamicText {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 4.5rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  margin: 0;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+  line-height: 1.2;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Tablet optimizations */
+@media (max-width: 1024px) {
+  .dynamicText {
+    font-size: 3.5rem;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .textOverlay {
+    transform: translateY(-30%);
+  }
+  
+  .textContainer {
+    padding: 1.5rem;
+  }
+  
+  .dynamicText {
+    font-size: 2.8rem;
+  }
+  
+  .staticText {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .textContainer {
+    padding: 1rem;
+  }
+  
+  .dynamicText {
+    font-size: 2.2rem;
+    letter-spacing: 0.8px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .staticText,
+  .dynamicText {
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .dynamicText {
+    transition: opacity 0.1s ease;
+  }
+  
+  .hidden {
+    transform: none;
+  }
+} 

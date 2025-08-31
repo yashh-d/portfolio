@@ -1,0 +1,111 @@
+.videoHero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.heroVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 110%;
+  min-height: 110%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%) scale(1.1);
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  /* Ensure video always fills viewport by cropping excess */
+  max-width: none;
+  max-height: none;
+}
+
+.videoOverlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Add semi-transparent background if needed for content overlay */
+  /* background: rgba(0, 0, 0, 0.3); */
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .videoHero {
+    height: 100vh;
+    /* Ensure proper mobile viewport handling */
+    height: 100svh; /* Use small viewport height on supported browsers */
+  }
+  
+  .heroVideo {
+    /* Ensure video covers full mobile screen */
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Tablet and small desktop optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .videoHero {
+    height: 100vh;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .heroVideo {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .videoOverlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Focus styles for accessibility */
+.heroVideo:focus {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
+}
+
+/* Enhanced cropping for perfect aspect ratio fitting */
+@media (aspect-ratio: 16/9) {
+  .heroVideo {
+    object-position: center center;
+  }
+}
+
+@media (aspect-ratio: 21/9) {
+  .heroVideo {
+    object-position: center center;
+  }
+}
+
+@media (aspect-ratio: 4/3) {
+  .heroVideo {
+    object-position: center center;
+  }
+}
+
+/* Fallback for browsers that don't support object-fit */
+@supports not (object-fit: cover) {
+  .heroVideo {
+    width: 100%;
+    height: 100%;
+    /* Force cropping through scaling */
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+} 
