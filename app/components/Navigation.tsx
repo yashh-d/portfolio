@@ -54,6 +54,16 @@ export default function Navigation() {
               </svg>
             </a>
           </div>
+          <a 
+            href="mailto:ydevarshi@gmail.com?subject=Hello%20Yash&body=Hi%20Yash,%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect.%0D%0A%0D%0ABest%20regards"
+            className={styles.contactButton}
+            aria-label="Send email to Yash Devarshi"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className={styles.contactIcon}>
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Get in touch
+          </a>
         </div>
       </div>
     </nav>

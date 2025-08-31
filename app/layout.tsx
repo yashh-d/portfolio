@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata, Viewport } from 'next'
 import Navigation from './components/Navigation'
 
+// Updated: Portfolio deployment
 export const metadata: Metadata = {
   title: 'Personal Portfolio',
   description: 'Personal portfolio website featuring a beautiful sunrise video',
